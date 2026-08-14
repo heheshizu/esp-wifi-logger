@@ -183,7 +183,7 @@ bool is_connected(void* handle_t)
 }
 
 #ifdef CONFIG_TRANSPORT_PROTOCOL_UDP
-void wifi_logger()
+void wifi_logger(void *arg)
 {
 	struct network_data* handle = malloc(sizeof(struct network_data));
 	network_manager(handle);
@@ -212,7 +212,7 @@ void wifi_logger()
 #endif
 
 #ifdef CONFIG_TRANSPORT_PROTOCOL_TCP
-void wifi_logger()
+void wifi_logger(void *arg)
 {
 	char* log_message;
 	while(1) // To keep trying over and over
@@ -265,7 +265,7 @@ void wifi_logger()
 #endif
 
 #ifdef CONFIG_TRANSPORT_PROTOCOL_WEBSOCKET
-void wifi_logger()
+void wifi_logger(void *arg)
 {
 	esp_websocket_client_handle_t handle = websocket_network_manager();
 

@@ -73,7 +73,7 @@ void start_wifi_logger(void);
  * @brief function which handles sending of log messages to server by TCP or UDP
  *
  */
-void wifi_logger();
+void wifi_logger(void *arg);
 /*
  * @brief A common wrapper function to check connection status for all interfaces
  *
