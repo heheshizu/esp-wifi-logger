@@ -1,5 +1,9 @@
 #include "utils.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 const char log_level_char[5] = { 'E', 'W', 'I', 'D', 'V'};
 const char log_level_color[5][7] = {"\e[31m", "\e[33m", "\e[32m", "\e[39m", "\e[39m"};
 
@@ -15,3 +19,6 @@ char* generate_log_message_timestamp(uint log_level, uint32_t timestamp, char* l
     return c_log_string;
 }
 
+#ifdef __cplusplus
+}
+#endif
