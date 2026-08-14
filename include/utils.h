@@ -7,6 +7,12 @@
 extern "C" {
 #endif
 
+// for uint32_t
+#include <stdint.h>
+
+// for the type of uint
+#include <sys/types.h>
+
 /**
  * @brief adds timestamp to the log message
  *
